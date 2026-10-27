@@ -265,7 +265,7 @@ function Misspelled:GUILD_ROSTER_UPDATE()
 end
 
 function Misspelled:ADDON_LOADED(event, addonName)
-	if event == "ADDON_LOADED" and addonName == "WIM" then
+	if event == "ADDON_LOADED" and addonName == "WIM" and WIM then
 		WIM.RegisterWidgetTrigger("msg_box", "whisper,chat,w2w", "OnEscapePressed", Misspelled.EditBox_OnEscapePressed)
 		WIM.RegisterWidgetTrigger("msg_box", "whisper,chat,w2w", "OnEnterPressed", Misspelled.EditBox_OnEnterPressed)
 		WIM.RegisterWidgetTrigger("msg_box", "whisper,chat,w2w", "OnTextChanged", Misspelled.EditBox_OnTextChanged)
